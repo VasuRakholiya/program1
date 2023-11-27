@@ -1,56 +1,13 @@
-// import React from 'react'
-// import PropTypes from 'prop-types'
-// //useage of props
-// export default function Navbar(props) {
-//   return (
-//     <nav className={`navbar navbar-expand-lg navbar-${props.Mode} bg-${props.Mode}`}>{/*allow me to change light and dark mode dynamically*/}
-//   <div className="container-fluid">
-//     <a className="navbar-brand" href="/">{props.Title}</a>
-//     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//       <span className="navbar-toggler-icon"></span>
-//     </button>
-//     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-//         <li className="nav-item">
-//           <a className="nav-link active" aria-current="page" href="/">Home</a>
-//         </li>
-//         <li className="nav-item">
-//           <a className="nav-link" href="/">About</a>
-//         </li>
-//       </ul>
-//       <form className="d-flex" role="search">
-//         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-//         <button className="btn btn-outline-primary" type="submit">Search</button>
-//       </form>
-//       {/* if else condition with switch */}
-//       <div className={`form-check form-switch text-${props.Mode==='light'?'dark':'light'}`}>
-//       <input className="mx-1 form-check-input" onClick={props.toggleMode}type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-//       <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark</label>
-//       </div>
-//       <div className={`form-check form-switch text-${props.Red==='light'?'red':'light'}`}>
-//       <input className="mx-1 form-check-input" onClick={props.tMode}type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-//       <label className="form-check-label" htmlFor="flexSwitchCheckDefault">red</label>
-//       </div>
-//     </div>
-//   </div>
-// </nav>
-//   )
-// }
-// //props types 
-// Navbar.propTypes={Title : PropTypes.string}
-
-// Navbar.defaultProps={Title:'hii'};
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.Mode} bg-${props.Mode}`}>
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#">
           {props.Title}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -65,14 +22,17 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              {/* <Link className="nav-link active" aria-current="page" to="/">
                 Home
-              </Link>
+              </Link> */}
+              <a className="nav-link active" aria-current="page" href="#">
+                Home
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              {/* <Link className="nav-link" to="/about">
                 About
-              </Link>
+              </Link> */}
             </li>
           </ul>
           <form className="d-flex" role="search">
@@ -93,7 +53,7 @@ export default function Navbar(props) {
               Dark
             </label>
           </div>
-          <div className={`form-check form-switch text-${props.Red === 'light' ? 'red' : 'light'}`}>
+          {/* <div className={`form-check form-switch text-${props.Red === 'light' ? 'red' : 'light'}`}>
             <input
               className="mx-1 form-check-input"
               onClick={props.tMode}
@@ -101,10 +61,10 @@ export default function Navbar(props) {
               role="switch"
               id="flexSwitchCheckRed"
             />
-            <label className="form-check-label" htmlFor="flexSwitchCheckRed">
+            <label className="form-check-label" htmlFor="flexSwitchCheckRed" >
               Red
             </label>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
